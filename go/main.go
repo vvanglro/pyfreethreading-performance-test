@@ -3,14 +3,19 @@ package main
 import (
 	"flag"
 	"fmt"
+	"math/big"
 	"runtime"
 	"time"
 )
 
-func cpuBoundTask(n int) int {
-	sum := 0
+func cpuBoundTask(n int) *big.Int {
+	sum := big.NewInt(0)
+	tmp := big.NewInt(0)
+
 	for i := 0; i < n; i++ {
-		sum += i * i
+		tmp.SetInt64(int64(i))
+		tmp.Mul(tmp, tmp)
+		sum.Add(sum, tmp)
 	}
 	return sum
 }
