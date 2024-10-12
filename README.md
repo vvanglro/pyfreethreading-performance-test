@@ -24,4 +24,10 @@ alias ft=free-threading
 [1] https://py-free-threading.github.io/    
 [2] https://til.simonwillison.net/python/trying-free-threaded-python    
 [3] https://mp.weixin.qq.com/s/nYTGpajJS5gtHj7YPepA_g   
-[4] https://discuss.python.org/t/about-free-threading-performance/54604
+[4] https://discuss.python.org/t/about-free-threading-performance/54604     
+[5] https://blog.changs.co.uk/free-threaded-python-with-asyncio.html
+
+---
+```shell
+conda create -n py313t python=3.13 python-freethreading
+```
