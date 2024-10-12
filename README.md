@@ -1,4 +1,6 @@
+```sh
 alias ft=free-threading
+```
 
 直接上结论，就本仓库这个测试脚本来说，测试下来最大提升貌似就5x左右了。
 ![img.png](image/8threads.png)
