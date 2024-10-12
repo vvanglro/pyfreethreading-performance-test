@@ -5,18 +5,22 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 
 
-def cpu_bound_task(n):
+def cpu_bound_task_sum(n):
     """A CPU-bound task that computes the sum of squares up to n."""
     num = sum(i * i for i in range(n))
     return num
 
+def cpu_bound_task(n):
+    if n <= 1:
+        return n
+    return cpu_bound_task(n-1) + cpu_bound_task(n-2)
 
 def main():
     parser = argparse.ArgumentParser(description="Run a CPU-bound task with threads")
     parser.add_argument("--threads", type=int, default=4, help="Number of threads")
     parser.add_argument("--tasks", type=int, default=10, help="Number of tasks")
     parser.add_argument(
-        "--size", type=int, default=5000000, help="Task size (n for sum of squares)"
+        "--size", type=int, default=35, help="Fibonacci number to compute (n for nth Fibonacci number)"
     )
     args = parser.parse_args()
     print(f"Python Version: {sys.version}")
