@@ -19,3 +19,9 @@ alias ft=free-threading
 
 - [ ] CPU使用率和内存使用的测试
 - [ ] 对比go和rust
+
+## ref
+[1] https://py-free-threading.github.io/    
+[2] https://til.simonwillison.net/python/trying-free-threaded-python    
+[3] https://mp.weixin.qq.com/s/nYTGpajJS5gtHj7YPepA_g   
+[4] https://discuss.python.org/t/about-free-threading-performance/54604
